@@ -29,28 +29,30 @@
 
   <body>
     <main>
-    <header>
-      <img
-        src="./assets/img/Asset 4@2x.png"
-        alt="ABC Company Logo"
-        class="logo"
-      />
-      <nav class="navigationBar">
-        <ul>
-          <li>About</li>
-          <li>Solutions</li>
-          <li>Training Programs</li>
-          <li>Learning Library</li>
-          <li>Get in Touch</li>
-        </ul>
-      </nav>
-      <span style="color: grey; font-size: 2em">
-        <i class="fa-solid fa-bars"></i>
-      </span>
-    </header>
+      <header>
+        <img
+          src="./assets/img/Asset 4@2x.png"
+          alt="ABC Company Logo"
+          class="logo"
+        />
+        <nav class="navigationBar">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Training Programs</a></li>
+            <li><a href="#">Learning Library</a></li>
+            <li><a href="#">Get in Touch</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </header>
 
     <!-- HERO SECTION -->
+
     <div class="hero container">
+      <h2 class="heroSubtitle">Unlock Your Sales Potential</h2>
       <h1 class="heroTitle">
         Transforming Teams – <span>Empowering Leaders</span>
       </h1>
@@ -60,23 +62,15 @@
       </p>
       <div class="heroButton">
         <button class="heroBtn">
-          <a href="https://www.youtube.com/watch?v=Bs-_Q_7Wi74"> LEARN MORE </a>
+          <a href="#">LEARN MORE</a>
         </button>
-        <div
-          id="btnIcon"
-          style="
-            color: #00003a;
-            background-color: white;
-            font-size: 20px;
-            height: 35px;
-            text-align: center;
-            padding-top: 5px;
-          "
-        >
+        <div class="btnIcon">
           <i class="fa fa-arrow-right" aria-hidden="true"></i>
         </div>
       </div>
     </div>
+
+    <!-- INTRODUCTION -->
 
     <div class="introGrid">
       <div class="intro">
@@ -142,18 +136,14 @@
 
     <div class="aboutUs">
       <h1 class="aboutUsTitle">
-        Find out why ABC Sales Consulting are the go-to consultants for your
-        business
+        Get the insights you need to make smart decisions and improve sales performance dramatically.
       </h1>
     </div>
 
     <div class="serviceCardContainer">
-      <div class="ourServices">
-        <button class="servicesBtn">OUR SERVICES</button>
-      </div>
       <div class="serviceCard">
         <img
-          src="./assets/img/client_vector.png"
+          src="./assets/img/Effective-Sales-Training-Techniques-jpg.webp"
           alt="Tag Vector"
           class="cardImage"
         />
@@ -163,12 +153,13 @@
             We have set free service for 3 days for new users who want to try
             our service before starting subscription
           </p>
+          <button class="cardBtn">LEARN MORE</button>
         </div>
       </div>
 
       <div class="serviceCard">
         <img
-          src="./assets/img/consultancy_vector.png"
+          src="./assets/img/istockphoto-1443245439-612x612.jpg"
           alt="Rocket Vector"
           class="cardImage"
         />
@@ -178,12 +169,13 @@
             We have set free service for 3 days for new users who want to try
             our service before starting subscription
           </p>
+          <button class="cardBtn">LEARN MORE</button>
         </div>
       </div>
 
       <div class="serviceCard">
         <img
-          src="./assets/img/professional_vector.webp"
+          src="./assets/img/sales-training-strategy.jpg"
           alt="Diamond Vector"
           class="cardImage"
         />
@@ -193,12 +185,13 @@
             We have set free service for 3 days for new users who want to try
             our service before starting subscription
           </p>
+          <button class="cardBtn">LEARN MORE</button>
         </div>
       </div>
 
       <div class="serviceCard">
         <img
-          src="./assets/img/consultation_vector.jpeg"
+          src="./assets/img/sales training-deb753bf-888c-4d37-8db6-85a0c56e3761.jpg"
           alt="Sun Vector"
           class="cardImage"
         />
@@ -208,10 +201,11 @@
             We have set free service for 3 days for new users who want to try
             our service before starting subscription
           </p>
+          <button class="cardBtn">LEARN MORE</button>
         </div>
       </div>
-      <div class="contactButton">
-        <button class="contactUsBtn">Contact Us</button>
+      <div class="servicesButton">
+        <button class="moreBtn">READ MORE</button>
         <div
           id="btnIcon"
           style="
@@ -228,47 +222,100 @@
       </div>
     </div>
 
+    <!-- THE TEAM -->
+    <div class="teamContainer">
+    <h1 class="teamTitle">THE TEAM </h1>
+    <div class="team">
+    <div class="teamMembers">
+      <img src="./assets/img/alela.png" alt="Priscilla Alela-COO">
+      <div class="teamContent">
+      <h1 class="memberName">PRISCILLA ALELA</h1>
+      <br>
+      <p class="memberParagraph">For nearly 20 years, she has thrived in the dynamic world of sales, navigating diverse fields across Kenya and Uganda. It's more than a career for her.</p>
+      <br>
+      <button class="cardBtn">READ MORE</button>
+    </div>
+    </div>
+
+    <div class="teamMembers">
+      <img src="./assets/img/dahlin.png" alt="Dahlin Sajjabi-CEO">
+      <div class="teamContent">
+      <h1 class="memberName">DAHLIN SAJJABI</h1>
+      <br>
+      <p class="memberParagraph">My entrepreneurial spirit ignited in 2014 when I co- founded Tasty Yellow Yolk. This experience, coupled with my door-to-door supermarket sales, fuelled my passion for the art of the sale.</p>
+      <br>
+      <button class="cardBtn">READ MORE</button>
+    </div>
+  </div>
+
+    <div class="teamMembers">
+      <img src="./assets/img/godwin.png" alt="Godwin Batuma-CHO">
+      <div class="teamContent">
+      <h1 class="memberName">GODWIN BATUMA</h1>
+      <br>
+      <p class="memberParagraph">I am a results-driven sales and marketing professional with over 10 years of experience driving revenue growth</p>
+      <br>
+      <button class="cardBtn">READ MORE</button>
+    </div>
+    </div>
+  </div>
+  </div>
+
+    <!-- TESTIMONIALS -->
+
     <div class="testimonialsContainer">
       <button class="testimonialsBtn">TESTIMONIALS</button>
       <h1 class="testimonialsTitle">
         Hear What Our Clients Have to Say About Us
       </h1>
 
-      <div class="testimonySlider">
+      <div class="testimonialsGrid">
         <div class="testimonyCard">
-          <h2 class="cardHeading">"The best support system ever"</h2>
+          <div class="clientInfo">
+            <img src="https://via.placeholder.com/80/f0f0f0/333?Text=BY" alt="Client Avatar" class="clientAvatar">
+            <div>
+              <p class="clientName">Brian Yiga</p>
+              <h3 class="clientJob">CEO, Zirobwe Farm</h3>
+            </div>
+          </div>
+          <p class="cardHeading">"The best support system ever"</p>
           <p class="clientTestimony">
-            People have the best support system ever. They will respond to you
-            within a minute. It also has lots of features that you can take
-            advantage of. The most effective consulting firm you can try
+            [Placeholder testimonial text for Brian Yiga. This should be a concise and impactful quote about their experience.]
           </p>
-          <p class="client">Brian Yiga</p>
-          <h3 class="clientJob">CEO, Zirobwe Farm</h3>
         </div>
 
         <div class="testimonyCard">
-          <h2 class="cardHeading">"Good and Solid Team</h2>
+          <div class="clientInfo">
+            <img src="https://via.placeholder.com/80/e0e0e0/444?Text=BS" alt="Client Avatar" class="clientAvatar">
+            <div>
+              <p class="clientName">Bagus S</p>
+              <h3 class="clientJob">CEO, [Placeholder Company]</h3>
+            </div>
+          </div>
+          <p class="cardHeading">"Good and Solid Team"</p>
           <p class="clientTestimony">
-            People have the best support system ever. They will respond to you
-            within a minute. It also has lots of features that you can take
-            advantage of. The most effective consulting firm you can try
+            [Placeholder testimonial text for Bagus S. Highlight a key positive aspect of working with your company.]
           </p>
-          <p class="client">Bagus S</p>
-          <h3 class="clientJob">CEO, Zirobwe Farm</h3>
         </div>
 
         <div class="testimonyCard">
-          <h2 class="cardHeading">"The Keys To My Success</h2>
+          <div class="clientInfo">
+            <img src="https://via.placeholder.com/80/d0d0d0/555?Text=M" alt="Client Avatar" class="clientAvatar">
+            <div>
+              <p class="clientName">Mayang</p>
+              <h3 class="clientJob">[Placeholder Title], [Placeholder Organization]</h3>
+            </div>
+          </div>
+          <p class="cardHeading">"The Keys To My Success"</p>
           <p class="clientTestimony">
-            People have the best support system ever. They will respond to you
-            within a minute. It also has lots of features that you can take
-            advantage of. The most effective consulting firm you can try
+            [Placeholder testimonial text for Mayang. Focus on how your services helped them achieve their goals.]
           </p>
-          <p class="client">Mayang</p>
-          <h3 class="clientJob">CEO, Zirobwe Farm</h3>
         </div>
       </div>
-    </div>
+
+      </div>
+
+      <!-- CALL TO ACTION -->
 
     <div class="callToAction">
       <h1 class="joinUs">ARE YOU READY TO TAKE YOUR BUSINESS TO THE NEXT LEVEL</h1>
