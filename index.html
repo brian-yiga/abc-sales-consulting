@@ -30,10 +30,11 @@
   <body>
     <main>
       <header>
-        <a href="#"><img
-          src="./assets/img/Asset 4@2x.png"
-          alt="ABC Company Logo"
-          class="logo"
+        <a href="#"
+          ><img
+            src="./assets/img/Asset 4@2x.png"
+            alt="ABC Company Logo"
+            class="logo"
         /></a>
         <nav class="navigationBar">
           <ul>
@@ -91,8 +92,7 @@
       <!-- INTRODUCTION -->
 
       <div class="introGrid">
-        <div class="container">
-          
+        <div class="container mobile">
           <div class="intro">
             <div>
               <img src="./assets/img/training.jpeg" alt="training" />
@@ -129,12 +129,27 @@
 
           <div class="intro" id="youtubeVid">
             <div class="videoContainer">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/kz71opw6C_8?si=LhlPuYY1CTYvPfej&amp;start=876" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/kz71opw6C_8?si=LhlPuYY1CTYvPfej&amp;start=876"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="introContent">
-              <div class="introTitle">Master the Price Question: Turning "How Much?" into "Yes!"</div>
+              <div class="introTitle">
+                Master the Price Question: Turning "How Much?" into "Yes!"
+              </div>
               <p class="introText">
-                Don't let the price inquiry derail your sales momentum. This video reveals powerful strategies to confidently address the "how much?" question, effectively communicate value, and guide your clients towards a successful close. Learn how to shift the focus from cost to the compelling benefits you offer.
+                Don't let the price inquiry derail your sales momentum. This
+                video reveals powerful strategies to confidently address the
+                "how much?" question, effectively communicate value, and guide
+                your clients towards a successful close. Learn how to shift the
+                focus from cost to the compelling benefits you offer.
               </p>
             </div>
           </div>
@@ -147,8 +162,13 @@
           <div class="hiring statementCard">
             <div class="hiringContent">
               <h2 class="hiringTitle">WE'RE HIRING</h2>
-              <p class="hiringText">Click here to explore career opportunities and join our dynamic team!</p>
-              <a href="./pages/programmes.html" class="hiringLink">LEARN MORE</a>
+              <p class="hiringText">
+                Click here to explore career opportunities and join our dynamic
+                team!
+              </p>
+              <a href="./pages/programmes.html" class="hiringLink"
+                >LEARN MORE</a
+              >
             </div>
           </div>
 
@@ -178,9 +198,6 @@
               </p>
             </div>
           </div>
-
-  
-
         </div>
       </div>
 
@@ -188,13 +205,19 @@
 
       <div class="photoCarouselContainer">
         <div class="photoCarousel">
-          <img src="./assets/img/communication-technology-business-global-networks-telecommunications-handshake-stack-coins-internet-258540585.webp" alt="" />
+          <img
+            src="./assets/img/communication-technology-business-global-networks-telecommunications-handshake-stack-coins-internet-258540585.webp"
+            alt=""
+          />
           <img src="./assets/img/abcTraining.jpeg" alt="" />
           <img src="./assets/img/abcTraining2.jpeg" alt="" />
           <img src="./assets/img/abcTraining3.jpeg" alt="" />
           <img src="./assets/img/abcTraining4.jpeg" alt="" />
           <img src="./assets/img/alela.jpg" alt="" />
-          <img src="./assets/img/Effective-Sales-Training-Techniques-jpg.webp" alt="" />
+          <img
+            src="./assets/img/Effective-Sales-Training-Techniques-jpg.webp"
+            alt=""
+          />
           <img src="./assets/img/dahlin.jpeg" alt="" />
           <img src="./assets/img/godwin.jpeg" alt="" />
           <img src="./assets/img/sales-training-strategy.jpg" alt="" />
@@ -498,54 +521,57 @@
       </div>
     </main>
 
-   
-
-<div id="contactFormModal" class="modal-container">
-  <div class="modal-form-content">
-    <span class="form-close-button">&times;</span>
-    <h2>Get in Touch</h2>
-    <form id="getInTouchForm">
-      <div class="form-group">
-        <label for="fullName">Full Name:</label>
-        <input type="text" id="fullName" name="fullName" required>
+    <div id="contactFormModal" class="modal-container">
+      <div class="modal-form-content">
+        <span class="form-close-button">&times;</span>
+        <h2>Get in Touch</h2>
+        <form id="getInTouchForm">
+          <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required />
+          </div>
+          <div class="form-group">
+            <label for="businessName">Business Name:</label>
+            <input type="text" id="businessName" name="businessName" />
+          </div>
+          <div class="form-group">
+            <label for="businessType">Type of Business:</label>
+            <select id="businessType" name="businessType">
+              <option value="">-- Select --</option>
+              <option value="retail">Retail</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="service">Service Industry</option>
+              <option value="technology">Technology</option>
+              <option value="education">Education</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="employeeCount">Number of Employees:</label>
+            <input
+              type="number"
+              id="employeeCount"
+              name="employeeCount"
+              min="1"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="helpText">How can we help you today?</label>
+            <textarea id="helpText" name="helpText" rows="5"></textarea>
+          </div>
+          <button type="submit" class="submitBtn">Submit</button>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="businessName">Business Name:</label>
-        <input type="text" id="businessName" name="businessName">
-      </div>
-      <div class="form-group">
-        <label for="businessType">Type of Business:</label>
-        <select id="businessType" name="businessType">
-          <option value="">-- Select --</option>
-          <option value="retail">Retail</option>
-          <option value="manufacturing">Manufacturing</option>
-          <option value="service">Service Industry</option>
-          <option value="technology">Technology</option>
-          <option value="education">Education</option>
-          <option value="healthcare">Healthcare</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="employeeCount">Number of Employees:</label>
-        <input type="number" id="employeeCount" name="employeeCount" min="1">
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone">
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="helpText">How can we help you today?</label>
-        <textarea id="helpText" name="helpText" rows="5"></textarea>
-      </div>
-      <button type="submit" class="submitBtn">Submit</button>
-    </form>
-  </div>
-</div>
+    </div>
 
     <footer>
       <div class="formTitle">
@@ -561,14 +587,26 @@
       <div class="footerForm">
         <form id="contactForm">
           <div class="formContainer">
-          <input type="text" id="contactName" name="name" placeholder="Your name" required />
-          <input type="text" id="contactEmail" name="email" placeholder="Your email address" required />
-          <div class="checkInput">
-            <input type="checkbox" id="check" name="checkbox"/>
-            <label for="check">I'm not a robot</label>
-            <button class="contactFormBtn">CONTACT US</button>
+            <input
+              type="text"
+              id="contactName"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+            <input
+              type="text"
+              id="contactEmail"
+              name="email"
+              placeholder="Your email address"
+              required
+            />
+            <div class="checkInput">
+              <input type="checkbox" id="check" name="checkbox" />
+              <label for="check">I'm not a robot</label>
+              <button class="contactFormBtn">CONTACT US</button>
+            </div>
           </div>
-        </div>
         </form>
       </div>
       <div class="footerCard">
@@ -599,12 +637,14 @@
     </footer>
 
     <div class="whatsapp-button">
-      <a href="https://wa.me/256704605462" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://wa.me/256704605462"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i class="fab fa-whatsapp"></i>Chat With Us
       </a>
     </div>
-   
-
 
     <script src="./script.js"></script>
   </body>
