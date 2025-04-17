@@ -148,11 +148,13 @@ header {
   margin: 0 0 20px 0;
   line-height: 1.2em;
   color: var(--green);
+  text-shadow: 0 0 5px var(--green);
   font-weight: 700; 
 }
 
 .heroTitle span {
   color: var(--tertiary);
+  text-shadow: 0 0 5px var(--tertiary);
 }
 
 .heroTagline {
@@ -773,8 +775,14 @@ footer::before {
 
 .formHeading {
   font-size: 1.5em;
-  color: white;
+  color: lightgray;
   margin-bottom: 20px;
+}
+
+.contacts {
+  line-height: 25px;
+  letter-spacing: 3px;
+  color: lightgray;
 }
 
 .contactUs {
@@ -786,7 +794,7 @@ footer::before {
 .googleButton {
   background-color: var(--primary);
   border: 2px solid white;
-  color: white;
+  color: lightgray;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -818,7 +826,7 @@ input::placeholder {
   width: 60%;
   background-color: var(--primary);
   border: 2px solid white;
-  color: white;
+  color: lightgray;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -842,7 +850,7 @@ input::placeholder {
 
 .footerCard {
   background-color: var(--primary);
-  color: white;
+  color: lightgray;
   margin-bottom: 15px;
 }
 
@@ -878,7 +886,7 @@ fa-facebook {
     background-color: var(--blueGrey);
     padding: 5px 10px;
     text-decoration: none;
-    color: white;
+    color: lightgray;
     border-radius: 20px;
     margin-left: 20px;
     font-size: 10px;
@@ -1104,7 +1112,7 @@ fa-facebook {
   }
 
   .navBtn:hover {
-    transform: scale(1.3);
+    transform: scale(1.05);
   }
 
   .introContent {

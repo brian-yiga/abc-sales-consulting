@@ -1,0 +1,213 @@
+:root {
+    --primary: #00003a;
+    --green: rgb(86, 185, 77);
+    --secondary: #f4c129;
+    --tertiary: #f68926;
+    --lightGreen: #86c548;
+    --lightBlue: rgb(54, 114, 185);
+    --blueGrey: rgb(39, 174, 228);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  body {
+    font-family: "rubik";
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    background-color: #00003a;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/img/training4blackandWhite.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 250%;
+    opacity: 0.07;
+    z-index: -1;
+  }
+  
+  /*HEADER*/
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary);
+    width: 100%;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: sticky;
+    border-bottom: 1px solid rgba(39, 174, 228, 0.3);
+  }
+  
+  .logo {
+    width: 7.6em;
+    height: auto;
+  }
+  
+  .navigationBar {
+    display: none;
+  }
+  .navigationBar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navigationBar li {
+    margin-left: 20px;
+  }
+  
+  .navigationBar li:first-child {
+    margin-left: 0;
+  }
+  
+  .navigationBar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease;
+  }
+  
+  .navigationBar li a:hover {
+    color: var(--secondary);
+  }
+  
+  .navigationBar.show-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: var(--primary);
+    width: 100%;
+    padding: 20px;
+    align-items: flex-start;
+  }
+  
+  .navigationBar.show-nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .navigationBar.show-nav li {
+    margin: 10px 0;
+  }
+  
+  .hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0;
+    display: block;
+  }
+  
+  .hamburger:focus {
+    outline: none;
+  }
+
+  /*HERO*/
+  h1{
+    font-size: 2.5em;
+    color: var(--secondary);
+    text-shadow: 0 0 10px var(--secondary);
+    margin-top: 80px;
+  }
+
+  @media (min-width: 768px) {
+    /*HEADER*/
+    .hamburger {
+      display: none;
+    }
+  
+    .logo {
+      width: 10em;
+      height: auto;
+    }
+  
+    .navigationBar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .navBtn {
+      background-color: var(--blueGrey);
+      padding: 5px 10px;
+      text-decoration: none;
+      color: lightgray;
+      border-radius: 20px;
+      margin-left: 20px;
+      font-size: 10px;
+    }
+  
+    .navBtn:hover {
+      background-color: var(--secondary);
+      color: var(--primary);
+      transform: scale(1.1);
+    }
+  
+    .navigationBar ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .navigationBar li {
+      font-size: 10px;
+      font-weight: 100;
+      letter-spacing: 5px;
+      padding: 15px 5px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid var(--lightGreen);
+    }
+    
+  
+    .navigationBar li:hover {
+      color: var(--secondary);
+      background-color: var(--lightBlue);
+      border-bottom-width: 5px;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+    .navigationBar li {
+      font-size: 14px;
+      font-weight: 100;
+      letter-spacing: 7px;
+    }
+  
+    .navBtn {
+      font-size: 14px;
+    }
+  
+    .navBtn:hover {
+      transform: scale(1.05);
+    }
+}
