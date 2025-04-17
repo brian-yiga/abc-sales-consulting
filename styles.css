@@ -1,5 +1,5 @@
 :root {
-  --primary: #00003a;
+  --primary: rgb(0, 0, 58);
   --green: rgb(86, 185, 77);
   --secondary: #f4c129;
   --tertiary: #f68926;
@@ -61,6 +61,8 @@ header {
 .logo {
   width: 7.6em;
   height: auto;
+  padding: 5px 0;
+  cursor: pointer;
 }
 
 .navigationBar {
@@ -148,13 +150,11 @@ header {
   margin: 0 0 20px 0;
   line-height: 1.2em;
   color: var(--green);
-  text-shadow: 0 0 5px var(--green);
   font-weight: 700; 
 }
 
 .heroTitle span {
   color: var(--tertiary);
-  text-shadow: 0 0 5px var(--tertiary);
 }
 
 .heroTagline {
@@ -298,6 +298,17 @@ header {
   color: white;
   border-radius: 8px;
 
+}
+
+.hiringLink {
+  border: 2px solid white;
+  padding: 10px 20px;
+}
+
+.hiringLink:hover {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--lightGreen);
 }
 
 .visionContent,
@@ -773,11 +784,7 @@ footer::before {
   z-index: -1;
 }
 
-.formHeading {
-  font-size: 1.5em;
-  color: lightgray;
-  margin-bottom: 20px;
-}
+
 
 .contacts {
   line-height: 25px;
@@ -806,23 +813,38 @@ footer::before {
   background-color: var(--lightGreen);
 }
 
-form {
+<!--FORM-->
+
+.formHeading {
+  font-size: 1.5em;
+  color: lightgray;
+  margin-bottom: 20px;
+}
+
+.formContainer {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin: 40px 0;
 }
 
-input,
-.submitBtn {
+#contactName,
+#contactEmail,
+.contactFormBtn {
   height: 65px;
+  padding-left: 25px;
+  font-size: 18px;
+  border: none;
 }
 
 input::placeholder {
-  padding-left: 20px;
+  padding-left: 10px;
+  color: lightgray;
+  font-size: 14px;
+  font-style: italic;
 }
 
-.submitBtn {
+.contactFormBtn {
   width: 60%;
   background-color: var(--primary);
   border: 2px solid white;
@@ -832,24 +854,24 @@ input::placeholder {
   cursor: pointer;
 }
 
-.submitBtn:hover {
+.contactFormBtn:hover {
   background-color: var(--lightGreen);
 }
 
 .checkInput {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   gap: 17px;
   background-color: white;
   color: var(--primary);
   font-size: 13px;
-  padding-left: 6px;
+  padding-left: 25px;
 }
 
 .footerCard {
-  background-color: var(--primary);
+  background-color: rgba(0, 0, 58, 0.8);
   color: lightgray;
   margin-bottom: 15px;
 }
@@ -861,6 +883,149 @@ input::placeholder {
 fa-facebook {
   color: var(--lightGreen);
   font-size: 1.5em;
+}
+
+
+
+.socialMedia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  margin-top: 20px;
+  width: 50%;
+  margin: 0 auto; 
+}
+
+.socialMedia a i {
+  color: white;
+  font-size: 25px;
+}
+
+.socialMedia a:hover i {
+  color: var(--secondary);
+}
+
+/*MODAL*/
+
+.modal-container {
+  display: none; /* Initially hidden */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity for backdrop */
+}
+
+.modal-form-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* Adjust top margin as needed */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; /* 60% of the screen width */
+  height: 60%; /* 60% of the screen height */
+  position: relative; /* For close button positioning */
+  opacity: 0.95; /* A little bit transparent */
+  overflow-y: auto; /* Enable scrolling within the form content if it overflows */
+}
+
+.form-close-button {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-close-button:hover,
+.form-close-button:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left; /* Align labels to the left */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing */
+  height: 100px; /* Approximate 5 lines */
+}
+
+.submitBtn {
+  padding: 12px 20px;
+  background-color: var(--green); /* Use your green color variable */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  width: auto; /* Adjust width as needed */
+  display: block;
+  margin-top: 20px;
+}
+
+.submitBtn:hover {
+  background-color: darken(var(--green), 10%); /* Darken on hover */
+}
+
+/*WHATSAPP BUTTON*/
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 70px; /* Adjusted for mobile, you might need to tweak */
+  right: 15px;
+  z-index: 100;
+}
+
+.whatsapp-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  padding: 10px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button a:hover {
+  background-color: #128C7E; /* Darker WhatsApp green */
+}
+
+.whatsapp-button i {
+  font-size: 18px;
+  margin-right: 8px;
 }
 
 /*MEDIA QUERIES*/
@@ -882,17 +1047,17 @@ fa-facebook {
     align-items: center;
   }
 
-  .navBtn {
+  #navBtn {
     background-color: var(--blueGrey);
-    padding: 5px 10px;
+    padding: 10px 15px;
     text-decoration: none;
     color: lightgray;
     border-radius: 20px;
     margin-left: 20px;
-    font-size: 10px;
+    font-size: 14px;
   }
 
-  .navBtn:hover {
+  #navBtn:hover {
     background-color: var(--secondary);
     color: var(--primary);
     transform: scale(1.1);
@@ -915,6 +1080,7 @@ fa-facebook {
     color: white;
     text-decoration: none;
     border-bottom: 1px solid var(--lightGreen);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-bottom-width 0.3s ease-in-out;
   }
   
 
@@ -1039,17 +1205,6 @@ fa-facebook {
     margin-bottom: 0;
   }
 
-  /*testimonials*/
-  /* .testimonialsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-
-  .testimonyCard {
-    margin-bottom: 0;
-  } */
-
   .testimonialsGrid {
     display: flex;
     flex-direction: row;
@@ -1088,6 +1243,22 @@ fa-facebook {
     margin-right: 5px;
     opacity: 0.8;
   }
+
+  /*WHATSAPP BUTTON*/
+
+  .whatsapp-button {
+    bottom: 20px;
+    right: 20px;
+  }
+  .whatsapp-button a {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 25px;
+  }
+  .whatsapp-button i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1100,7 +1271,6 @@ fa-facebook {
     letter-spacing: 5px;
   }
 
-
   .navigationBar li {
     font-size: 14px;
     font-weight: 100;
@@ -1109,6 +1279,7 @@ fa-facebook {
 
   .navBtn {
     font-size: 14px;
+    transition:  0.3s ease-in-out, color 0.3s ease-in-out;
   }
 
   .navBtn:hover {
@@ -1131,10 +1302,14 @@ fa-facebook {
     width: 100%;
   }
 
+  .hiring {
+    height: 300px;
+  }
+  
+
   .team {
     gap: 30px;
   }
-
 
   .footerCard {
     display: flex;
@@ -1143,8 +1318,18 @@ fa-facebook {
     padding: 30px;
   }
 
-  .hiring {
-    height: 300px;
+  .formContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 80%;
+    margin: 40px auto 10px;
   }
-  
+
+  .checkInput,
+  #contactName,
+  #contactEmail {
+    width: 33%;
+  }
+ 
 }
