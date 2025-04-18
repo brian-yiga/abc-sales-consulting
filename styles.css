@@ -1,7 +1,7 @@
 :root {
   --primary: rgb(0, 0, 58);
   --green: rgb(86, 185, 77);
-  --secondary: #f4c129;
+  --secondary: rgb(244, 193, 41);
   --tertiary: #f68926;
   --lightGreen: #86c548;
   --lightBlue: rgb(54, 114, 185);
@@ -302,7 +302,8 @@ header {
 }
 
 .vision,
-.mission {
+.mission,
+.hiring {
   color: white;
   padding: 20px;
   margin-bottom: 20px;
@@ -314,37 +315,38 @@ header {
 }
 
 .statementCard:hover {
-  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: var(--lightGreen);
+  background-color: grey;
   color: white;
 }
 
 .vision {
-  background-color: var(--lightBlue);
+  background-color: rgba(54, 114, 185, 0.8);
+  color: white;
 }
 
 .mission {
-  background-color: var(--secondary);
-  color: var(--primary);
+  background-color: rgba(244, 193, 41, 0.8);
+  color: white;
 }
 
 .hiring {
-  background-color: rgba(220, 53, 69, 0.5); /* Red color for hiring card */
+  background-color: rgba(220, 53, 69, 0.5); 
   color: white;
-  border-radius: 8px;
 
 }
 
 .hiringLink {
   border: 2px solid white;
-  padding: 10px 20px;
+  text-decoration: none;
+  padding: 5px 20px;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .hiringLink:hover {
   background-color: var(--primary);
-  color: white;
-  border-color: var(--lightGreen);
+  border: 1px solid var(--primary);
 }
 
 .visionContent,
@@ -354,52 +356,25 @@ header {
   margin-bottom: 20px; /* Space between text and banner on mobile */
 }
 
-#visionTitle1,
-#missionTitle1 {
+.title1 {
   font-weight: lighter;
   font-size: 2.5em;
   margin-bottom: 5px;
 }
 
-#visionTitle2,
-#missionTitle2 {
+.title2 {
   font-weight: bolder;
   font-size: 2.5em;
   margin-bottom: 15px;
 }
 
-.hiringTitle {
-  font-size: 1.8em;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.hiringText {
-  font-size: 0.9em;
-  line-height: 1.4;
-  margin-bottom: 15px;
-}
-
-.hiringLink {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 #visionParagraph,
-#missionParagraph {
+#missionParagraph,
+#hiringParagraph {
   font-size: 0.9em;
   line-height: 1.5;
   font-weight: 300;
-}
-
-.vision img,
-.mission img {
-  width: 100%;
-  height: auto;
-  max-height: 80px; /* Limit banner height on mobile */
-  object-fit: cover;
-  border-radius: 6px;
+  margin-bottom: 20px;
 }
 
 /*PHOTO CAROUSEL*/
@@ -439,11 +414,10 @@ header {
 }
 
 .aboutUsTitle {
-  font-size: 1.43em;
+  font-size: 1.2em;
   font-style: italic;
   letter-spacing: 2px;
   line-height: 1.4;
-  font-weight: bold;
   margin: 0 auto;
   color:white;
   text-align: center;
@@ -789,6 +763,8 @@ header {
   cursor: pointer;
   padding: 8px 16px;
   margin-top: 10px;
+  transition: background-color 0.5s ease, color 0.5s ease,
+    border-color 0.5s ease;
 }
 
 .callToActionBtn:hover {
@@ -843,10 +819,14 @@ footer::before {
   cursor: pointer;
   padding: 10px 20px;
   margin: 35px 0;
+  transition: background-color 0.5s ease, color 0.5s ease,
+    border-color 0.5s ease;
 }
 
 .googleButton:hover {
   background-color: var(--lightGreen);
+  color: var(--primary);
+  border: 1px solid var(--lightGreen);
 }
 
 <!--FORM-->
@@ -888,10 +868,13 @@ input::placeholder {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease,
+    border-color 0.5s ease;
 }
 
 .contactFormBtn:hover {
   background-color: var(--lightGreen);
+  color: var(--primary);
 }
 
 .checkInput {
@@ -1094,12 +1077,12 @@ fa-facebook {
 
   #navBtn {
     background-color: var(--blueGrey);
-    padding: 10px 15px;
+    padding: 5px 15px;
     text-decoration: none;
     color: lightgray;
-    border-radius: 20px;
+    border-radius: 15px;
     margin-left: 20px;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   #navBtn:hover {
@@ -1120,8 +1103,8 @@ fa-facebook {
   .navigationBar li {
     font-size: 8px;
     font-weight: 100;
-    letter-spacing: 3px;
-    padding: 15px 5px;
+    letter-spacing: 2px;
+    padding: 15px 0;
     color: white;
     text-decoration: none;
     border-bottom: 1px solid var(--lightGreen);
@@ -1331,6 +1314,7 @@ fa-facebook {
 
 @media (min-width: 1200px) {
 
+  /*HEADER*/
   .logo {
     width: 10em;
     height: auto;
@@ -1339,18 +1323,11 @@ fa-facebook {
   .container {
     width: 90%;
   }
-  .heroTitle {
-    font-size: 4em;
-  }
-
-  .heroTagline {
-    letter-spacing: 5px;
-  }
 
   .navigationBar li {
     font-size: 14px;
     font-weight: 100;
-    letter-spacing: 7px;
+    letter-spacing: 5px;
   }
 
   #navBtn {
@@ -1361,6 +1338,17 @@ fa-facebook {
   .navBtn:hover {
     transform: scale(1.05);
   }
+
+  /*HERO SECTION*/
+  .heroTitle {
+    font-size: 4em;
+  }
+
+  .heroTagline {
+    letter-spacing: 5px;
+  }
+
+  /*INTRO SECTION*/
 
   .introContent {
     display: flex;
@@ -1377,6 +1365,8 @@ fa-facebook {
   .intro div {
     width: 100%;
   }
+
+  /*ABOUT US*/
 
   .serviceCard {
     display: flex;
@@ -1403,14 +1393,32 @@ fa-facebook {
     align-self: center;
   }
 
-  .hiring {
-    height: 300px;
-  }
-  
+  /*MISSION STATEMENT*/
 
+  .hiringTitle {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+   
+  }
+
+  .hiringText {
+    margin-bottom: 60px;
+  }
+
+  .vision,
+  .mission,
+  .hiring {
+    height: 400px;
+  }
+
+  /*TEAM*/
+  
   .team {
     gap: 30px;
   }
+
+  /*FOOTER*/
 
   .footerCard {
     display: flex;
