@@ -56,6 +56,7 @@ header {
   z-index: 1000;
   position: sticky;
   border-bottom: 1px solid rgba(39, 174, 228, 0.3);
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.7);
 }
 
 .logo {
@@ -86,7 +87,7 @@ header {
 .navigationBar li a {
   color: white;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 16px;
   transition: color 0.3s ease;
 }
 
@@ -98,13 +99,22 @@ header {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 60px;
-  left: 0;
-  background-color: var(--primary);
+  top: 90px;
+  right: 0;
+  background-color: grey;
   width: 100%;
   padding: 20px;
   align-items: flex-start;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.7);
 }
+
+.navigationBar.show-nav li a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
 
 .navigationBar.show-nav ul {
   flex-direction: column;
@@ -113,7 +123,28 @@ header {
 
 .navigationBar.show-nav li {
   margin: 10px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--lightGreen);  
 }
+
+
+.navigationBar.show-nav #navBtn {
+  color: var(--primary);
+  text-decoration: none;
+  align-self: center;
+  background-color: var(--blueGrey);
+  padding: 20px 100px;
+  margin: 0 auto;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navigationBar.show-nav #navBtn:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+
 
 .hamburger {
   background: none;
@@ -909,27 +940,33 @@ fa-facebook {
 /*MODAL*/
 
 .modal-container {
-  display: none; /* Initially hidden */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none; 
+  position: fixed; 
+  margin-top: 80px;
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity for backdrop */
+  width: 100%; 
+  height: 90%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.7); 
+
 }
 
 .modal-form-content {
   background-color: #fefefe;
-  margin: 10% auto; /* Adjust top margin as needed */
+  /* Reduce top margin for better visibility on smaller screens */
+  margin: 5% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 60%; /* 60% of the screen width */
-  height: 60%; /* 60% of the screen height */
+  /* Make the form take up more of the screen on mobile */
+  width: 90%;
+  /* Adjust height as needed, or consider removing fixed height for better content flow */
+  max-height: 90%;
   position: relative; /* For close button positioning */
   opacity: 0.95; /* A little bit transparent */
-  overflow-y: auto; /* Enable scrolling within the form content if it overflows */
+  overflow-y: auto; /* Enable scrolling within the form content */
+  border-radius: 8px; /* Softer corners for mobile */
 }
 
 .form-close-button {
@@ -937,9 +974,10 @@ fa-facebook {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 28px;
+  font-size: 24px; /* Slightly smaller for mobile */
   font-weight: bold;
   cursor: pointer;
+  z-index: 2; /* Ensure it's above the content */
 }
 
 .form-close-button:hover,
@@ -957,6 +995,7 @@ fa-facebook {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  font-size: 0.9em; /* Slightly smaller label text on mobile */
 }
 
 .form-group input[type="text"],
@@ -966,7 +1005,7 @@ fa-facebook {
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px; /* Slightly more padding for touch targets */
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -975,19 +1014,19 @@ fa-facebook {
 
 .form-group textarea {
   resize: vertical; /* Allow vertical resizing */
-  height: 100px; /* Approximate 5 lines */
+  min-height: 100px; /* Ensure a reasonable starting height */
 }
 
 .submitBtn {
-  padding: 12px 20px;
+  padding: 14px 24px; /* Larger touch target */
   background-color: var(--green); /* Use your green color variable */
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.1em; /* Slightly larger for readability */
   transition: background-color 0.3s ease;
-  width: auto; /* Adjust width as needed */
+  width: 100%; /* Make it full width on mobile for easier tapping */
   display: block;
   margin-top: 20px;
 }
@@ -995,7 +1034,6 @@ fa-facebook {
 .submitBtn:hover {
   background-color: darken(var(--green), 10%); /* Darken on hover */
 }
-
 /*WHATSAPP BUTTON*/
 
 .whatsapp-button {
@@ -1009,7 +1047,7 @@ fa-facebook {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #25D366; /* WhatsApp green */
+  background-color: #25D366; 
   color: white;
   padding: 10px 12px;
   border-radius: 20px;
@@ -1027,6 +1065,8 @@ fa-facebook {
   font-size: 18px;
   margin-right: 8px;
 }
+
+
 
 /*MEDIA QUERIES*/
 
@@ -1054,7 +1094,7 @@ fa-facebook {
     color: lightgray;
     border-radius: 20px;
     margin-left: 20px;
-    font-size: 10px;
+    font-size: 14px;
   }
 
   #navBtn:hover {
@@ -1089,6 +1129,8 @@ fa-facebook {
     background-color: var(--lightBlue);
     border-bottom-width: 5px;
   }
+
+
 
   /*HERO SECTION*/
 
@@ -1306,8 +1348,8 @@ fa-facebook {
     letter-spacing: 7px;
   }
 
-  .navBtn {
-    font-size: 14px;
+  #navBtn {
+    font-size: 16px;
     transition:  0.3s ease-in-out, color 0.3s ease-in-out;
   }
 
@@ -1384,6 +1426,28 @@ fa-facebook {
   #contactName,
   #contactEmail {
     width: 33%;
+  }
+
+  /*MODAL FORM*/
+
+  .modal-container {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 60px;
+    width: 100%; 
+    height: 80%; 
+    margin: 0 auto;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.7); 
+  
+  }
+
+  .submitBtn {
+    width: 30%;
+    display: inline-block;
+    align-self: center;
   }
  
 }

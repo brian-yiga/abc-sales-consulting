@@ -2,10 +2,31 @@
 // Hamburger Menu Toggle
 const hamburger = document.querySelector('.hamburger');
 const navigationBar = document.querySelector('.navigationBar');
+const menuLinks = document.querySelectorAll('.navigationBar ul li a');
+const navBtn = document.querySelector('#navBtn');
+
+function closeMenu() {
+  navigationBar.classList.remove('show-nav');
+}
+  
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    closeMenu(); 
+  });
+});
+
+navBtn.addEventListener('click', () => {
+  navBtn.addEventListener('click', () => {
+    closeMenu();
+  });  
+});
+
 
 hamburger.addEventListener('click', () => {
   navigationBar.classList.toggle('show-nav');
 });
+
+
 
 
 // Smooth Scrolling for testimonials on mobile
