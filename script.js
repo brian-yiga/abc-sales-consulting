@@ -31,6 +31,8 @@ hamburger.addEventListener('click', () => {
 
 // Smooth Scrolling for testimonials on mobile
 const testimonialsGrid = document.querySelector('.testimonialsGrid');
+
+if (testimonialsGrid) {
 const testimonyCards = document.querySelectorAll('.testimonyCard');
 let currentIndex = 0;
 const slideInterval = 3000; 
@@ -53,6 +55,7 @@ testimonialsGrid.addEventListener('mouseenter', () => {
 testimonialsGrid.addEventListener('mouseleave', () => {
   intervalId = setInterval(nextSlide, slideInterval);
 });
+}
 
 
 // Photo Carousel
@@ -75,6 +78,7 @@ const modal = document.getElementById("contactFormModal");
   const btn = document.getElementById("newModalBtn");
   const closeBtn = document.querySelector(".form-close-button");
 
+  if (modal && btn && closeBtn) {
   btn.addEventListener('click', function() {
     console.log("New Open button clicked");
     modal.style.display = "block";
@@ -89,4 +93,19 @@ const modal = document.getElementById("contactFormModal");
     if (event.target === modal) {
       modal.style.display = "none";
     }
+  });
+}
+
+  //STYLE CURRENT PAGE NAVIGATION LINK
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.navigationBar ul li a');
+    const currentPage = window.location.pathname;
+
+    navLinks.forEach(link => {
+      const linkPath = new URL(link.href, window.location.origin).pathname;
+
+      if (linkPath === currentPage) {
+        link.classList.add('active');
+      }
+    });
   });

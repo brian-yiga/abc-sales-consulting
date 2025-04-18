@@ -95,6 +95,11 @@ header {
   color: var(--secondary);
 }
 
+.navigationBar ul li a.active {
+  color: var(--secondary);
+  font-weight: bold; 
+}
+
 .navigationBar.show-nav {
   display: flex;
   flex-direction: column;
@@ -1032,7 +1037,7 @@ fa-facebook {
 }
 
 .submitBtn:hover {
-  background-color: darken(var(--green), 10%); /* Darken on hover */
+  background-color: var(--primary); 
 }
 /*WHATSAPP BUTTON*/
 
