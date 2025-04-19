@@ -59,18 +59,62 @@ testimonialsGrid.addEventListener('mouseleave', () => {
 
 
 // Photo Carousel
-const carouselContainer = document.querySelector('.photoCarouselContainer');
-const carousel = document.querySelector('.photoCarousel');
-const images = document.querySelectorAll('.photoCarousel img');
+const tickerContainer = document.querySelector('.photoCarouselContainer');
+const scrollSpeed = 1;
+let isPaused = false;
+let interactionTimeout; // To handle tap-and-hold for pause on touch
 
-if (carouselContainer && carousel && images.length > 0) {
-  carouselContainer.addEventListener('mousemove', (e) => {
-    const containerWidth = carouselContainer.offsetWidth;
-    const mouseX = e.clientX - carouselContainer.getBoundingClientRect().left;
-    const scrollAmount = (mouseX / containerWidth - 0.5) * (carousel.scrollWidth - containerWidth);
-    carousel.style.transform = `translateX(${-scrollAmount}px)`;
-  });
+function scrollTicker() {
+  if (!isPaused) {
+    tickerContainer.scrollLeft += scrollSpeed;
+    if (tickerContainer.scrollLeft > tickerContainer.scrollWidth / 2) {
+      tickerContainer.scrollLeft = 0;
+    }
+  }
+  requestAnimationFrame(scrollTicker);
 }
+
+scrollTicker();
+
+function pauseOnInteractionStart() {
+  isPaused = true;
+}
+
+function resumeOnInteractionEnd() {
+  isPaused = false;
+}
+
+// Mouse events for desktop
+tickerContainer.addEventListener('mouseenter', pauseOnInteractionStart);
+tickerContainer.addEventListener('mouseleave', resumeOnInteractionEnd);
+tickerContainer.addEventListener('click', () => {
+  isPaused = !isPaused; // Toggle pause on click (desktop)
+});
+
+// Touch events for mobile and tablet
+tickerContainer.addEventListener('touchstart', (event) => {
+  pauseOnInteractionStart();
+  // For a tap-and-hold pause, you could set a timeout here:
+  // interactionTimeout = setTimeout(() => { isPaused = true; }, 500); // Pause after 500ms hold
+});
+
+tickerContainer.addEventListener('touchend', (event) => {
+  resumeOnInteractionEnd();
+  // Clear the timeout if the touch ends before the hold duration:
+  // clearTimeout(interactionTimeout);
+});
+
+// Optional: Handle a quick tap as a toggle for pause on touch devices
+let lastTapTime = 0;
+tickerContainer.addEventListener('click', (event) => {
+  const currentTime = new Date().getTime();
+  const tapDelay = currentTime - lastTapTime;
+
+  if (tapDelay < 300 && tapDelay > 0) { // Consider a quick double tap
+    isPaused = !isPaused; // Toggle pause on quick tap
+  }
+  lastTapTime = currentTime;
+});
 
 //Modal Form
 
