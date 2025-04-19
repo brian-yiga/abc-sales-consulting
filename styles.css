@@ -403,6 +403,50 @@ header {
   margin-right: 0;
 }
 
+/*PHOT0 MODAL*/
+
+/* Styling for the image ticker modal */
+.image-ticker-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Ensure it's above other content */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.image-ticker-modal-content {
+  margin: 220px auto;
+  display: block;
+  width: 90%; /* Adjust for mobile */
+  max-width: 500px; /* Maximum width */
+  height: auto;
+}
+
+.image-ticker-close-button {
+  position: absolute;
+  top: 100px;
+  right: 30px;
+  color: #f1f1f1;
+  font-size: 30px; /* Adjust for mobile */
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.image-ticker-close-button:hover,
+.image-ticker-close-button:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* You might need to adjust the image-ticker-modal-content and close-button
+   positioning and sizing further for optimal mobile experience. */
+
 /*SERVICES*/
 
 .aboutUs {

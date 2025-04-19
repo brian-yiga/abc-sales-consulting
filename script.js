@@ -84,6 +84,39 @@ function resumeOnInteractionEnd() {
   isPaused = false;
 }
 
+//Photo Modal
+const tickerStrip = document.querySelector('.photoCarouselContainer'); // Make sure this selector is correct
+const images = tickerStrip.querySelectorAll('img');
+const imageTickerModal = document.getElementById('imageTickerModal');
+const imageTickerModalImage = document.getElementById('imageTickerModalImage');
+const imageTickerCloseButton = document.querySelector('.image-ticker-close-button');
+
+// Event listener for clicks on the images
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    imageTickerModal.style.display = 'block'; // Show the modal
+    imageTickerModalImage.src = img.src;     // Set the modal image source
+    // Optional: Consider pausing the automatic scrolling here if you re-enable it
+    // isPaused = true;
+  });
+});
+
+// Event listener to close the modal
+imageTickerCloseButton.addEventListener('click', () => {
+  imageTickerModal.style.display = 'none';
+  // Optional: If you paused scrolling, you might want to resume it here
+  // isPaused = false;
+});
+
+// Close the modal if the user clicks outside the modal content
+window.addEventListener('click', (event) => {
+  if (event.target === imageTickerModal) {
+    imageTickerModal.style.display = 'none';
+    // Optional: If you paused scrolling, you might want to resume it here
+    // isPaused = false;
+  }
+});
+
 // Mouse events for desktop
 tickerContainer.addEventListener('mouseenter', pauseOnInteractionStart);
 tickerContainer.addEventListener('mouseleave', resumeOnInteractionEnd);
