@@ -1243,7 +1243,8 @@ fa-facebook {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
-  flex-direction: column; /* Stack on mobile */
+  flex-direction: column;
+  margin-bottom: 10px; /* Stack on mobile */
 }
 
 .highlightImage {
@@ -1392,6 +1393,63 @@ fa-facebook {
 
 .uploadCVButton:hover {
   background-color: var(--blueGrey);
+}
+
+/*PROGRAMMES PAGE*/
+
+.programmes {
+  text-align: center;
+}
+
+.programmes .heroTagline {
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.programmes .heroBtn {
+  text-decoration: none;
+}
+
+.programmes .cardContent {
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.programmes .cardContent ul {
+  padding-left: 30px;
+  text-align: center;
+  list-style:lower-latin;
+  color: var(--lightGreen);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.programmes .cardBtn {
+  margin-top: 50px;
+  text-decoration: none;
+}
+
+.programmes .card p{
+  margin-bottom: 20px;
+}
+
+.programmes .card .callToActionBtn{
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/*JOBS PAGE*/
+.jobCard img {
+  width: 100%;
+  height: 400px; 
+  object-fit: fit;
+  object-position: top;
+  margin-bottom: 10px;
+}
+
+.jobCard .applyButton {
+  margin-top: 20px;
 }
 
 
@@ -1645,7 +1703,7 @@ fa-facebook {
 }
 
 .resourceImage {
-    width: 40%;
+    width: 50%;
     height: auto;
     object-fit: cover;
 }
@@ -1656,7 +1714,12 @@ fa-facebook {
 }
 
 .bookCard .resourceImage {
-    height: 200px; /* Adjust height for book covers on larger screens */
+  width: 50%;
+    height: 300px; /* Adjust height for book covers on larger screens */
+}
+
+.podcast {
+  width: 50%;
 }
 
 .resourceTitle {
@@ -1823,6 +1886,94 @@ fa-facebook {
   font-size: 1em;
 }
 
+/*PROGRAMMES PAGE*/
+
+.ourProgrammes {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.ourProgrammes .serviceCard {
+  margin-bottom: 20px;
+}
+
+.ourProgrammes .serviceCard img{
+  width: 100%; 
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.benefitsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/*NEWS PAGE*/
+
+.highlightCard {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.reverseCard {
+  flex-direction: row-reverse;
+}
+
+.highlightCard .highlightImage {
+  width: 50%;
+  height: 300px; /* Adjust height for book covers on larger screens */
+  object-fit: cover;
+
+}
+
+.thoughtContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/*JOBS PAGE*/
+
+.jobCard {
+  display: flex;
+  align-items: start;
+}
+
+.jobCard img {
+  width: 50%;
+  height: auto; 
+  object-fit: fit;
+  object-position: top;
+  margin-bottom: 10px;
+}
+
+.jobCard .applyButton {
+  margin-top: 20px;
+}
+
+.jobContent {
+  width: 50%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+}
+
+.jobCard .jobTitle {
+  font-size: 1.7em;
+}
+
+.jobCard .companyName {
+  font-size: 1.5em; 
+}
+
+.jobDetails {
+  text-align: left;
+  margin-top: 30px;
+}
 }
 
 @media (min-width: 1200px) {
@@ -1834,7 +1985,7 @@ fa-facebook {
   }
 
   .container {
-    width: 90%;
+    max-width: 80%;
   }
 
   .navigationBar li {
@@ -1974,6 +2125,81 @@ fa-facebook {
     width: 30%;
     display: inline-block;
     align-self: center;
+  }
+
+  /*PROGRAMMES PAGE*/
+
+  .introGrid .introTitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: var(--primary);
+  }
+
+  .ourProgrammes .cardTitle {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+
+  .ourProgrammes .cardDescription {
+    font-size: 1em;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .benefitsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /*JOBS PAGE*/
+
+  .jobCardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .jobCard {
+    display: flex;
+    align-items: start;
+  }
+  
+  .jobCard img {
+    width: 50%;
+    height: 250px; 
+    object-fit: fit;
+    object-position: top;
+  }
+  
+  .jobCard .applyButton {
+    margin-top: 20px;
+  }
+  
+  .jobContent {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px;
+  }
+  
+  .jobCard .jobTitle {
+    font-size: 1.3em;
+  }
+  
+  .jobCard .companyName {
+    font-size: 1.2em; 
+  }
+  
+  .jobDetails {
+    text-align: left;
+    margin-top: 15px;
+  }
+
+  .jobCard .applyButton {
+    align-self: flex-end;
   }
  
 }
