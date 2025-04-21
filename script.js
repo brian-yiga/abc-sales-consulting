@@ -173,4 +173,38 @@ const modal = document.getElementById("contactFormModal");
   });
 }
 
+//TEAM MODAL
+document.addEventListener('DOMContentLoaded', function() {
+  const readMoreButtons = document.querySelectorAll('.read-more-btn');
+  const teamModals = document.querySelectorAll('.teamModal');
+  const closeButtons = document.querySelectorAll('.team-close-button');
+
+  readMoreButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const modalId = this.dataset.modalId;
+      const targetModal = document.getElementById(modalId);
+      if (targetModal) {
+        targetModal.style.display = 'block';
+      }
+    });
+  });
+
+  closeButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const modal = this.closest('.teamModal'); 
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+
+  window.addEventListener('click', function(event) {
+    teamModals.forEach(function(modal) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+});
+
 
