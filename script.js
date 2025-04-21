@@ -173,16 +173,4 @@ const modal = document.getElementById("contactFormModal");
   });
 }
 
-  //STYLE CURRENT PAGE NAVIGATION LINK
-  document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('.navigationBar ul li a');
-    const currentPage = window.location.pathname;
 
-    navLinks.forEach(link => {
-      const linkPath = new URL(link.href, window.location.origin).pathname;
-
-      if (linkPath === currentPage) {
-        link.classList.add('active');
-      }
-    });
-  });

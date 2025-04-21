@@ -95,9 +95,14 @@ header {
   color: var(--secondary);
 }
 
-.navigationBar ul li a.active {
+
+body.home .navigationBar ul li:first-child a,
+body.solutions-page .navigationBar ul li:nth-child(2) a,
+body.programmes-page .navigationBar ul li:nth-child(3) a,
+body.news-page .navigationBar ul li:nth-child(4) a,
+body.jobs-page .navigationBar ul li:nth-child(5) a {
   color: var(--secondary);
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .navigationBar.show-nav {
@@ -1096,6 +1101,298 @@ fa-facebook {
   margin-right: 8px;
 }
 
+/*SOLUTIONS PAGE*/
+
+.pageTitle {
+  /* Inheriting general styles, can add specific mobile styles here */
+  font-size: 2em; /* Adjust for mobile */
+  margin-bottom: 30px;
+}
+
+.resourceSection {
+  padding: 20px;
+  text-align: center;
+}
+
+.resourceGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.resourceCard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex; /* Enable flex for content alignment */
+  flex-direction: column; /* Stack image and text on mobile */
+}
+
+.resourceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.resourceImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.resourceContent {
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.resourceTitle {
+  color: var(--green);
+  font-size: 1.1em; /* Adjust for mobile */
+  margin-bottom: 10px;
+}
+
+.resourceDescription {
+  color: var(--primary);
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.resourceLink {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--secondary);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  font-size: 0.9em; /* Adjust for mobile */
+}
+
+.resourceLink:hover {
+  background-color: var(--tertiary);
+}
+
+.bookCard .resourceImage {
+  height: 150px; /* Adjust height for book covers on mobile */
+  object-fit: cover;
+}
+
+/*NEWS PAGE*/
+
+.pageTitle {
+  font-size: 2em; /* Adjust for mobile */
+  margin-bottom: 30px;
+}
+
+.foundersThoughts {
+  padding: 20px;
+  text-align: center;
+}
+
+.thoughtCard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.thoughtTitle {
+  color: var(--green);
+  font-size: 1em; /* Adjust for mobile */
+  margin-bottom: 5px;
+}
+
+.thoughtAuthor {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 10px;
+  font-size: 0.85em; /* Adjust for mobile */
+}
+
+.thoughtContent {
+  color: var(--primary);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 0.9em; /* Adjust for mobile */
+}
+
+.thoughtDate {
+  font-size: 0.75em; /* Adjust for mobile */
+  color: #999;
+  text-align: right;
+}
+
+.weeklyHighlight {
+  padding: 20px;
+  text-align: center;
+}
+
+.highlightCard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+}
+
+.highlightImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.highlightContent {
+  padding: 20px;
+  text-align: left;
+}
+
+.highlightTitle {
+  color: var(--green);
+  font-size: 1.2em; /* Adjust for mobile */
+  margin-bottom: 10px;
+}
+
+.highlightSummary {
+  color: var(--primary);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 0.9em; /* Adjust for mobile */
+}
+
+.highlightLink {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--blueGrey);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 0.9em; /* Adjust for mobile */
+}
+
+.highlightLink:hover {
+  background-color: var(--lightBlue);
+}
+
+/*JOBS PAGE*/
+
+.pageTitle {
+  font-size: 2em; /* Adjust for mobile */
+  margin-bottom: 30px;
+}
+
+.jobListing {
+  padding: 20px;
+}
+
+.jobCard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  align-items: flex-start; /* Align items to the left on mobile */
+}
+
+.jobOverview {
+  text-align: left;
+  margin-bottom: 15px;
+  width: 100%; /* Full width on mobile */
+}
+
+.jobTitle {
+  color: var(--green);
+  font-size: 1.2em; /* Adjust for mobile */
+  margin-bottom: 5px;
+}
+
+.companyName {
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.95em; /* Adjust for mobile */
+}
+
+.jobLocation {
+  color: #777;
+  font-size: 0.85em; /* Adjust for mobile */
+}
+
+.jobDetails {
+  text-align: left; /* Align left on mobile */
+  font-size: 0.85em; /* Adjust for mobile */
+  color: var(--primary);
+  margin-bottom: 15px;
+  width: 100%; /* Full width on mobile */
+}
+
+.jobDetails i {
+  margin-right: 5px;
+}
+
+.applyButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--tertiary);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 0.9em; /* Adjust for mobile */
+  align-self: flex-start; /* Align left on mobile */
+}
+
+.applyButton:hover {
+  background-color: var(--secondary);
+}
+
+.cvUpload {
+  text-align: center;
+  padding: 30px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+
+.cvUpload h2 {
+  color: var(--secondary);
+  font-size: 1.5em; /* Adjust for mobile */
+  margin-bottom: 15px;
+}
+
+.cvUpload p {
+  color: var(--primary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.9em; /* Adjust for mobile */
+}
+
+.uploadCVButton {
+  padding: 12px 25px;
+  background-color: var(--lightBlue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95em; /* Adjust for mobile */
+  transition: background-color 0.3s ease;
+}
+
+.uploadCVButton:hover {
+  background-color: var(--blueGrey);
+}
 
 
 /*MEDIA QUERIES*/
@@ -1330,6 +1627,202 @@ fa-facebook {
     font-size: 20px;
     margin-right: 10px;
   }
+
+  /*SOLUTIONS PAGE*/
+
+  .pageTitle {
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.resourceGrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.resourceCard {
+    flex-direction: row; /* Image and text side-by-side on larger screens */
+}
+
+.resourceImage {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+.resourceContent {
+    width: 60%;
+    padding: 20px;
+}
+
+.bookCard .resourceImage {
+    height: 200px; /* Adjust height for book covers on larger screens */
+}
+
+.resourceTitle {
+    font-size: 1.2em;
+}
+
+.resourceLink {
+    font-size: 1em;
+}
+
+/*NEWS PAGE*/
+
+.pageTitle {
+  font-size: 2em; /* Adjust for mobile */
+  margin-bottom: 30px;
+}
+
+.foundersThoughts {
+  padding: 20px;
+  text-align: center;
+}
+
+.thoughtCard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.thoughtTitle {
+  color: var(--green);
+  font-size: 1em; /* Adjust for mobile */
+  margin-bottom: 5px;
+}
+
+.thoughtAuthor {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 10px;
+  font-size: 0.85em; /* Adjust for mobile */
+}
+
+.thoughtContent {
+  color: var(--primary);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 0.9em; /* Adjust for mobile */
+}
+
+.thoughtDate {
+  font-size: 0.75em; /* Adjust for mobile */
+  color: #999;
+  text-align: right;
+}
+
+.weeklyHighlight {
+  padding: 20px;
+  text-align: center;
+}
+
+.highlightCard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+}
+
+.highlightImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.highlightContent {
+  padding: 20px;
+  text-align: left;
+}
+
+.highlightTitle {
+  color: var(--green);
+  font-size: 1.2em; /* Adjust for mobile */
+  margin-bottom: 10px;
+}
+
+.highlightSummary {
+  color: var(--primary);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 0.9em; /* Adjust for mobile */
+}
+
+.highlightLink {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--blueGrey);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 0.9em; /* Adjust for mobile */
+}
+
+.highlightLink:hover {
+  background-color: var(--lightBlue);
+}
+
+.pageTitle {
+  font-size: 3em;
+  margin-bottom: 40px;
+}
+
+.jobCard {
+  flex-direction: row; /* Elements side-by-side on larger screens */
+  align-items: center; /* Vertically align items */
+  justify-content: space-between;
+}
+
+.jobOverview {
+  text-align: left;
+  margin-bottom: 0;
+  width: auto; /* Adjust width on larger screens */
+}
+
+.jobDetails {
+  text-align: right;
+  margin-bottom: 0;
+  width: auto; /* Adjust width on larger screens */
+}
+
+.jobTitle {
+  font-size: 1.3em;
+}
+
+.companyName {
+  font-size: 1em;
+}
+
+.jobLocation {
+  font-size: 0.9em;
+}
+
+.jobDetails {
+  font-size: 0.9em;
+}
+
+.applyButton {
+  font-size: 1em;
+  align-self: center; /* Center on larger screens */
+}
+
+.cvUpload h2 {
+  font-size: 2em;
+}
+
+.cvUpload p {
+  font-size: 1em;
+}
+
+.uploadCVButton {
+  font-size: 1em;
+}
+
 }
 
 @media (min-width: 1200px) {
